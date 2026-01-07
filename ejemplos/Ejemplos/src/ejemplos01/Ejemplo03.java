@@ -17,6 +17,9 @@ public class Ejemplo03 {
                                          // obtenerSuma
         System.out.printf("El valor de la suma es: %d\n", valor);
         
+        //System.out.printf(suma);
+        // por que no es conocida por que no es una variable global es una variable local que 
+        //esta ubicada en el obtener suma 
         // System.out.printf("El valor de la suma es: %d\n", obtenerSuma(10, 30));
     }
     
