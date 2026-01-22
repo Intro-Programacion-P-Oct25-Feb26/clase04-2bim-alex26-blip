@@ -13,41 +13,37 @@ public class Ejemplo045 {
 
     public static void main(String[] args) {
         // 
-        //arreglo1 son las bases y arreglo 2 es la potencia 
         
         int [][] arreglo1 = {{1,2,3}, {3,2,4}, {2,6,2}};
         int [][] arreglo2 = {{1,2,3}, {2,2,2}, {3,1,2}};
         int [][] arreglo3 = llenarMatriz(arreglo1, arreglo2);
         int [][] arreglo4 = llenarMatriz2(arreglo1, arreglo2);
-        //new int[3][3]
         
-       
         
         obtenerReporte(arreglo1);
         obtenerReporte(arreglo2);
         obtenerReporte(arreglo3);
     }
-    public static int[][] llenarMatriz (int [][]x, int [][]y){
-        int [][] z = new int [3][3];
-            for (int i = 0; i < x.length; i++) {
-                for (int j = 0; j < x[i].length; j ++){
-                  z[i][j] = obtenerMultiplicacion(x[i][j],
-                          y[i][j]);   
-                }
-            }
-            return z;
-        }
     
-     public static int[][] llenarMatriz2 (int [][]x, int [][]y){
+    public static int[][] llenarMatriz(int[][] x, int[][] y){  
         int [][] z = new int [3][3];
-            for (int i = 0; i < x.length; i++) {
-                for (int j = 0; j < x[i].length; j ++){
-                  z[i][j] = obtenerPotencia(x[i][j],
-                          y[i][j]);   
-                }
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[i].length; j++) {
+                z[i][j] = obtenerMultiplicacion(x[i][j], y[i][j]);
             }
-            return z;
         }
+        return z;       
+    }
+    
+     public static int[][] llenarMatriz2(int[][] x, int[][] y){  
+        int [][] z = new int [3][3];
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[i].length; j++) {
+                z[i][j] = obtenerPotencia(x[i][j], y[i][j]);
+            }
+        }
+        return z;       
+    }
     
     public static void obtenerReporte(int[][] arreglo1){
         String cadena = "";
@@ -64,12 +60,21 @@ public class Ejemplo045 {
         int operacion;
         operacion = a * b;
         return operacion;
-       
-    //public static int obtenerPotencia(int a, int b){
-    //    int operacion;
-    //    operacion = math.pow (a b);
-    //    return operacion;    
-      
+        
+    }
+    
+    public static int convertirEntero(int a, int b){
+        return(int) a;
+
+        
+        
+    }
+    
+    public static int obtenerPotencia(int a, int b){
+        int operacion;
+        operacion = Math.pow(a,b);
+        return operacion;
+        
     }
     
     

@@ -11,7 +11,7 @@ package ejemplos01;
  */
 public class Ejemplo11 {
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         // 
         String mensajeSuma;
         String mensajeSumaDos;
